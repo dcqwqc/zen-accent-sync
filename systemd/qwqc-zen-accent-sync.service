@@ -1,0 +1,6 @@
+[Unit]
+Description=Sync Caelestia primary color to Zen Browser
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/libexec/qwqc-zen-accent-sync

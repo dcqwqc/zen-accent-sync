@@ -1,0 +1,30 @@
+[
+  {
+    "type": "dropdown",
+    "property": "mod.qwqc.zen_accent.source",
+    "label": "Accent color source",
+    "defaultValue": "caelestia",
+    "options": [
+      {"label": "Caelestia primary color", "value": "caelestia"},
+      {"label": "Custom Zen color", "value": "custom"}
+    ]
+  },
+  {
+    "type": "string",
+    "property": "mod.qwqc.zen_accent.custom_color",
+    "label": "Custom accent color (#RRGGBB)",
+    "defaultValue": "#000000"
+  },
+  {
+    "type": "checkbox",
+    "property": "mod.qwqc.zen_accent.protect",
+    "label": "Keep Zen from resetting the accent color",
+    "defaultValue": true
+  },
+  {
+    "type": "checkbox",
+    "property": "mod.qwqc.zen_accent.debug",
+    "label": "Debug logging",
+    "defaultValue": false
+  }
+]
