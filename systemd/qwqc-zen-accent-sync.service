@@ -1,6 +1,7 @@
 [Unit]
 Description=Persistent Caelestia → Zen Browser accent sync
-After=graphical-session.target
+After=graphical-session.target caelestia-shell.service
+Wants=caelestia-shell.service
 StartLimitIntervalSec=0
 
 [Service]
