@@ -136,7 +136,7 @@
 
     timer = window.setInterval(refreshBridge, 1000);
     Services.prefs.setBoolPref("qwqc.zen_accent.runtime.loaded", true);
-    Services.prefs.setStringPref("qwqc.zen_accent.runtime.version", "0.1.0");
+    Services.prefs.setStringPref("qwqc.zen_accent.runtime.version", "0.2.0");
 
     function destroy() {
       if (destroyed) return;

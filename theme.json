@@ -1,21 +1,33 @@
 {
   "id": "qwqc-zen-accent-sync",
   "name": "QWQC Zen Accent Sync",
-  "description": "Exposes Zen's real accent-color preference, protects it from resets, and optionally follows Caelestia's primary color.",
+  "description": "Persistently syncs Zen's accent to Caelestia's effective primary color and protects it from resets.",
   "homepage": "https://github.com/dcqwqc/zen-accent-sync",
   "preferences": "preferences.json",
   "scripts": {
     "zen-accent-sync.uc.js": {
-      "include": ["chrome://browser/content/browser.xhtml", "chrome://browser/content/browser.xul"]
+      "include": [
+        "chrome://browser/content/browser.xhtml",
+        "chrome://browser/content/browser.xul"
+      ]
     }
   },
-  "style": {"chrome": "style.css"},
+  "style": {
+    "chrome": "style.css"
+  },
   "readme": "README.md",
   "author": "qwqc",
-  "version": "0.1.0",
-  "tags": ["Zen", "Accent", "Theme", "Caelestia"],
+  "version": "0.2.0",
+  "tags": [
+    "Zen",
+    "Accent",
+    "Theme",
+    "Caelestia"
+  ],
   "createdAt": "2026-10-03",
-  "updatedAt": "2026-10-03",
-  "fork": ["zen"],
+  "updatedAt": "2026-10-04",
+  "fork": [
+    "zen"
+  ],
   "supportsUnload": true
 }

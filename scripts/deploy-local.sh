@@ -48,9 +48,11 @@ mkdir -p "$HOME/.local/libexec" "$HOME/.config/systemd/user"
 cp "$ROOT/scripts/sync-caelestia.py" "$HOME/.local/libexec/qwqc-zen-accent-sync"
 chmod 0755 "$HOME/.local/libexec/qwqc-zen-accent-sync"
 cp "$ROOT/systemd/qwqc-zen-accent-sync.service" "$HOME/.config/systemd/user/qwqc-zen-accent-sync.service"
-cp "$ROOT/systemd/qwqc-zen-accent-sync.path" "$HOME/.config/systemd/user/qwqc-zen-accent-sync.path"
 systemctl --user daemon-reload
-systemctl --user enable --now qwqc-zen-accent-sync.path >/dev/null
-"$HOME/.local/libexec/qwqc-zen-accent-sync"
+systemctl --user disable --now qwqc-zen-accent-sync.path >/dev/null 2>&1 || true
+rm -f "$HOME/.config/systemd/user/qwqc-zen-accent-sync.path"
+systemctl --user daemon-reload
+systemctl --user enable --now qwqc-zen-accent-sync.service >/dev/null
+systemctl --user restart qwqc-zen-accent-sync.service
 
 echo "Deployed $MOD_ID to $DEST"

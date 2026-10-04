@@ -1,6 +1,14 @@
 [Unit]
-Description=Sync Caelestia primary color to Zen Browser
+Description=Persistent Caelestia → Zen Browser accent sync
+After=graphical-session.target
+StartLimitIntervalSec=0
 
 [Service]
-Type=oneshot
-ExecStart=%h/.local/libexec/qwqc-zen-accent-sync
+Type=simple
+ExecStart=%h/.local/libexec/qwqc-zen-accent-sync --watch --interval 1
+Restart=always
+RestartSec=1
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target
