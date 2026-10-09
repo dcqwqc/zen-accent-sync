@@ -25,7 +25,7 @@ SINE_ROOT="$PROFILE/chrome/sine-mods"
 DEST="$SINE_ROOT/$MOD_ID"
 mkdir -p "$DEST"
 
-for file in theme.json preferences.json README.md LICENSE zen-accent-sync.uc.js style.css; do
+for file in theme.json preferences.json README.md LICENSE zen-accent-sync.uc.js zen-chatgpt-styles.uc.js style.css; do
   cp "$ROOT/$file" "$DEST/$file"
 done
 

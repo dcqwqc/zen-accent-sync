@@ -5,8 +5,14 @@
     "label": "Accent color source",
     "defaultValue": "caelestia",
     "options": [
-      {"label": "Caelestia primary color", "value": "caelestia"},
-      {"label": "Custom Zen color", "value": "custom"}
+      {
+        "label": "Caelestia primary color",
+        "value": "caelestia"
+      },
+      {
+        "label": "Custom Zen color",
+        "value": "custom"
+      }
     ]
   },
   {
@@ -19,6 +25,12 @@
     "type": "checkbox",
     "property": "mod.qwqc.zen_accent.protect",
     "label": "Keep Zen from resetting the accent color",
+    "defaultValue": true
+  },
+  {
+    "type": "checkbox",
+    "property": "mod.qwqc.zen_accent.chatgpt_theme",
+    "label": "Apply Caelestia accent inside ChatGPT",
     "defaultValue": true
   },
   {

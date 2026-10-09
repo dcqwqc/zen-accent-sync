@@ -1,11 +1,17 @@
 {
   "id": "qwqc-zen-accent-sync",
   "name": "QWQC Zen Accent Sync",
-  "description": "Persistently syncs Zen's accent to Caelestia's effective primary color and protects it from resets.",
+  "description": "Sync Zen and ChatGPT accents to Caelestia without changing ChatGPT layout",
   "homepage": "https://github.com/dcqwqc/zen-accent-sync",
   "preferences": "preferences.json",
   "scripts": {
     "zen-accent-sync.uc.js": {
+      "include": [
+        "chrome://browser/content/browser.xhtml",
+        "chrome://browser/content/browser.xul"
+      ]
+    },
+    "zen-chatgpt-styles.uc.js": {
       "include": [
         "chrome://browser/content/browser.xhtml",
         "chrome://browser/content/browser.xul"
@@ -17,7 +23,7 @@
   },
   "readme": "README.md",
   "author": "qwqc",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "tags": [
     "Zen",
     "Accent",

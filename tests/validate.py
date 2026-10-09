@@ -7,7 +7,7 @@ deploy = Path('scripts/deploy-local.sh').read_text()
 theme = json.loads(Path('theme.json').read_text())
 js = Path('zen-accent-sync.uc.js').read_text()
 
-assert theme['version'] == '0.2.0'
+assert theme['version'] == '0.3.0'
 assert 'scheme.colours.primary' in script
 assert script.index('if SCHEME.exists()') < script.index('if OVERRIDES.exists()')
 assert 'get_scheme' in script
@@ -17,5 +17,12 @@ assert 'RestartSec=1' in service
 assert 'WantedBy=default.target' in service
 assert 'enable --now qwqc-zen-accent-sync.service' in deploy
 assert 'disable --now qwqc-zen-accent-sync.path' in deploy
-assert 'runtime.version", "0.2.0"' in js
-print('zen accent sync 0.2.0 invariants: ok')
+assert 'runtime.version", "0.3.0"' in js
+print('zen accent sync 0.3.0 invariants: ok')
+
+new_script = Path("zen-chatgpt-styles.uc.js").read_text()
+assert "zen-chatgpt-styles.uc.js" in deploy
+assert "zen-chatgpt-styles.uc.js" in theme["scripts"]
+assert "domain(\"chatgpt.com\")" in new_script
+assert "unregisterSheet" in new_script
+assert "PREF" in new_script
